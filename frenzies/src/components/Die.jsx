@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Die(props) {
+function Die({isHeld,value,hold,id}) {
+  const buttonStyle = isHeld ? {backgroundColor: "#59E391"} : {}
   return (
-    <button>
-      {props.value}
+    <button style={buttonStyle} onClick={()=>hold(id)}>
+      {value}
     </button>
   )
 }
